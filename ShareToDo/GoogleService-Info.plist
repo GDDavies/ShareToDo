@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>408757586642-j0mi93fg55ti1mp061ucf9p86p6o8a5n.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.408757586642-j0mi93fg55ti1mp061ucf9p86p6o8a5n</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDKYrb08ILmoTF1WWA5BMvQDi2kZZurN-U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>408757586642</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>GDaviesDev.ShareToDo</string>
+	<key>PROJECT_ID</key>
+	<string>sharetodo-2bbee</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sharetodo-2bbee.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:408757586642:ios:2ac1c05173e23bb5</string>
+	<key>DATABASE_URL</key>
+	<string>https://sharetodo-2bbee.firebaseio.com</string>
+</dict>
+</plist>

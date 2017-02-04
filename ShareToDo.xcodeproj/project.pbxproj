@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930FF8F71E4691C40008E816 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 930FF8F61E4691C40008E816 /* GoogleService-Info.plist */; };
+		930FF8F91E46925D0008E816 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930FF8F81E46925D0008E816 /* AuthenticationManager.swift */; };
 		939B9E621E46890500D40B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E611E46890500D40B1C /* AppDelegate.swift */; };
-		939B9E641E46890500D40B1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E631E46890500D40B1C /* ViewController.swift */; };
+		939B9E641E46890500D40B1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E631E46890500D40B1C /* LoginViewController.swift */; };
 		939B9E671E46890500D40B1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939B9E651E46890500D40B1C /* Main.storyboard */; };
 		939B9E691E46890600D40B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939B9E681E46890600D40B1C /* Assets.xcassets */; };
 		939B9E6C1E46890600D40B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939B9E6A1E46890600D40B1C /* LaunchScreen.storyboard */; };
+		939B9E741E4690BD00D40B1C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E731E4690BD00D40B1C /* MainViewController.swift */; };
+		939B9E761E4690CF00D40B1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E751E4690CF00D40B1C /* SignUpViewController.swift */; };
+		D74E1D0F7412FC32B316D7F6 /* Pods_ShareToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22E52C22A367637E992740C /* Pods_ShareToDo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A9F21577E3C213B44180DC2 /* Pods-ShareToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareToDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareToDo/Pods-ShareToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		930FF8F61E4691C40008E816 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		930FF8F81E46925D0008E816 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		939B9E5E1E46890500D40B1C /* ShareToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939B9E611E46890500D40B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		939B9E631E46890500D40B1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		939B9E631E46890500D40B1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		939B9E661E46890500D40B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		939B9E681E46890600D40B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		939B9E6B1E46890600D40B1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		939B9E6D1E46890600D40B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		939B9E731E4690BD00D40B1C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		939B9E751E4690CF00D40B1C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B22E52C22A367637E992740C /* Pods_ShareToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC05E7191103C7E03FFD376E /* Pods-ShareToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareToDo/Pods-ShareToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74E1D0F7412FC32B316D7F6 /* Pods_ShareToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28BA4B81C2995C2D11EA3622 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F21577E3C213B44180DC2 /* Pods-ShareToDo.debug.xcconfig */,
+				EC05E7191103C7E03FFD376E /* Pods-ShareToDo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2DAF83F37E2A2258EB8F5609 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B22E52C22A367637E992740C /* Pods_ShareToDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		939B9E551E46890500D40B1C = {
 			isa = PBXGroup;
 			children = (
 				939B9E601E46890500D40B1C /* ShareToDo */,
 				939B9E5F1E46890500D40B1C /* Products */,
+				28BA4B81C2995C2D11EA3622 /* Pods */,
+				2DAF83F37E2A2258EB8F5609 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				939B9E611E46890500D40B1C /* AppDelegate.swift */,
-				939B9E631E46890500D40B1C /* ViewController.swift */,
+				939B9E731E4690BD00D40B1C /* MainViewController.swift */,
+				939B9E631E46890500D40B1C /* LoginViewController.swift */,
+				939B9E751E4690CF00D40B1C /* SignUpViewController.swift */,
+				930FF8F81E46925D0008E816 /* AuthenticationManager.swift */,
 				939B9E651E46890500D40B1C /* Main.storyboard */,
 				939B9E681E46890600D40B1C /* Assets.xcassets */,
 				939B9E6A1E46890600D40B1C /* LaunchScreen.storyboard */,
 				939B9E6D1E46890600D40B1C /* Info.plist */,
+				930FF8F61E4691C40008E816 /* GoogleService-Info.plist */,
 			);
 			path = ShareToDo;
 			sourceTree = "<group>";
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 939B9E701E46890600D40B1C /* Build configuration list for PBXNativeTarget "ShareToDo" */;
 			buildPhases = (
+				DB2869A5304CE58A04FEEA11 /* [CP] Check Pods Manifest.lock */,
 				939B9E5A1E46890500D40B1C /* Sources */,
 				939B9E5B1E46890500D40B1C /* Frameworks */,
 				939B9E5C1E46890500D40B1C /* Resources */,
+				A471CBAAF8DF604523FAC7B3 /* [CP] Embed Pods Frameworks */,
+				24E385C831E8F749A288E722 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				939B9E6C1E46890600D40B1C /* LaunchScreen.storyboard in Resources */,
+				930FF8F71E4691C40008E816 /* GoogleService-Info.plist in Resources */,
 				939B9E691E46890600D40B1C /* Assets.xcassets in Resources */,
 				939B9E671E46890500D40B1C /* Main.storyboard in Resources */,
 			);
@@ -132,12 +172,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24E385C831E8F749A288E722 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareToDo/Pods-ShareToDo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A471CBAAF8DF604523FAC7B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareToDo/Pods-ShareToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2869A5304CE58A04FEEA11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		939B9E5A1E46890500D40B1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939B9E641E46890500D40B1C /* ViewController.swift in Sources */,
+				939B9E741E4690BD00D40B1C /* MainViewController.swift in Sources */,
+				939B9E641E46890500D40B1C /* LoginViewController.swift in Sources */,
+				939B9E761E4690CF00D40B1C /* SignUpViewController.swift in Sources */,
+				930FF8F91E46925D0008E816 /* AuthenticationManager.swift in Sources */,
 				939B9E621E46890500D40B1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +348,7 @@
 		};
 		939B9E711E46890600D40B1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9F21577E3C213B44180DC2 /* Pods-ShareToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CALM89H945;
@@ -270,6 +362,7 @@
 		};
 		939B9E721E46890600D40B1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC05E7191103C7E03FFD376E /* Pods-ShareToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CALM89H945;
@@ -300,6 +393,7 @@
 				939B9E721E46890600D40B1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
