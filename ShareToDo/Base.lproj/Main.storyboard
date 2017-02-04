@@ -65,9 +65,30 @@
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="slW-VZ-KXA">
+            <objects>
+                <viewController id="pdQ-k1-UL7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Hv-Ii-wzo"/>
+                        <viewControllerLayoutGuide type="bottom" id="9C4-gS-5rc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CzG-LD-aMr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O63-vl-FvI">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="TsL-7w-obn"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcD-pq-iP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328.5" y="901.5"/>
+        </scene>
+        <!--Login View Controller-->
         <scene sceneID="gWc-ou-78b">
             <objects>
-                <viewController id="OmE-xr-1Ma" sceneMemberID="viewController">
+                <viewController id="OmE-xr-1Ma" customClass="LoginViewController" customModule="ShareToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZM-2i-h6c"/>
                         <viewControllerLayoutGuide type="bottom" id="tI5-8y-Ogm"/>
@@ -91,6 +112,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapLogin:" destination="OmE-xr-1Ma" eventType="touchUpInside" id="pJ3-g2-pks"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIP-63-Ygg">
                                 <rect key="frame" x="37.5" y="174" width="300" height="30"/>
@@ -112,15 +136,20 @@
                             <constraint firstItem="VIP-63-Ygg" firstAttribute="centerX" secondItem="jmz-Zg-3Yx" secondAttribute="centerX" id="nbz-WQ-SnO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="TVf-3i-GM3" id="DHy-q4-LNr"/>
+                        <outlet property="passwordField" destination="VIP-63-Ygg" id="cnF-St-h6b"/>
+                        <segue destination="kGM-Og-VTA" kind="show" identifier="ShowToDosFromLogin" id="bXj-KY-HYx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9r-bY-AHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.5999999999999" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1742" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="O9T-PO-YG2">
             <objects>
-                <viewController id="UUd-De-Vjj" sceneMemberID="viewController">
+                <viewController id="UUd-De-Vjj" customClass="SignUpViewController" customModule="ShareToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nkz-ou-ZhC"/>
                         <viewControllerLayoutGuide type="bottom" id="vI3-29-nOZ"/>
@@ -153,9 +182,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="slw-Rl-Twq" secondAttribute="height" multiplier="150:31" id="UVK-R7-Tz3"/>
                                 </constraints>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSignUp:" destination="UUd-De-Vjj" eventType="touchUpInside" id="C1s-gH-Y9N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,10 +206,16 @@
                             <constraint firstItem="slw-Rl-Twq" firstAttribute="top" secondItem="TzV-dS-9dW" secondAttribute="bottom" constant="33" id="yhb-9N-ec3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="DHO-EW-x3T" id="zT9-jV-v1F"/>
+                        <outlet property="nameField" destination="mpa-lS-oqd" id="ICa-UM-Hkc"/>
+                        <outlet property="passwordField" destination="TzV-dS-9dW" id="b6n-s4-fsl"/>
+                        <segue destination="kGM-Og-VTA" kind="show" identifier="ShowToDoList" id="wSo-sM-VPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMO-rs-UZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="136"/>
+            <point key="canvasLocation" x="2404" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1WS-Op-KRG">
@@ -195,7 +233,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulg-u9-mHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="137"/>
+            <point key="canvasLocation" x="386" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7SA-Bq-rvX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kGM-Og-VTA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xMk-Ex-5A4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pdQ-k1-UL7" kind="relationship" relationship="rootViewController" id="w4h-Op-yrj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZW-we-j1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741.5" y="901.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bXj-KY-HYx"/>
+    </inferredMetricsTieBreakers>
 </document>
