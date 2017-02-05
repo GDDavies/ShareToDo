@@ -7,30 +7,43 @@
 //
 
 import UIKit
+import Firebase
 
 class AddToDoViewController: UIViewController {
 
     @IBOutlet weak var toTextField: UITextField!
     @IBOutlet weak var toDoTextField: UITextField!
     
-    var toDo = [ToDo]()
+    var ref: FIRDatabaseReference!
+    var senderId: String?
+    var recipientName: String?
     
     @IBAction func saveToDo(_ sender: UIButton) {
         let toDoRecipient = toTextField.text
         let toDoText = toDoTextField.text
         
-        let toDoObject = ToDo(recipient: toDoRecipient!,sender: "",toDoText: toDoText!)
-        toDo.append(toDoObject)
-        for tos in toDo {
-            print(tos.recipient)
-            print(tos.toDoText)
-        }
+        let toDoObject = ToDo(recipient: toDoRecipient!,sender: senderId!,toDoText: toDoText!)
+        
+        let toDoRef = ref.child("todos").childByAutoId()
+        let todo = [
+            "text": toDoObject.toDoText,
+            "senderId": toDoObject.sender,
+            "recipientName": toDoObject.recipient //recipientName!
+        ]
+        toDoRef.setValue(todo)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelAddToDo(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        senderId = AuthenticationManager.sharedInstance.userId
+        
+        ref = FIRDatabase.database().reference(fromURL: "https://sharetodo-2bbee.firebaseio.com/")
     }
 
     override func didReceiveMemoryWarning() {

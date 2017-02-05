@@ -77,7 +77,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EuT-03-med" id="AT2-nz-lAE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -155,7 +155,13 @@
                             <constraint firstItem="gwN-F2-Bbd" firstAttribute="centerX" secondItem="KVs-X4-3ow" secondAttribute="centerX" id="vn2-ie-nOn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AAD-8s-84B"/>
+                    <navigationItem key="navigationItem" id="AAD-8s-84B">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vDT-5x-P5w">
+                            <connections>
+                                <action selector="cancelAddToDo:" destination="GLG-TA-wdu" id="Nv3-PE-vRw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="toDoTextField" destination="Clc-bH-GLd" id="ewg-No-eEb"/>
                         <outlet property="toTextField" destination="kqL-kg-ehO" id="caA-Co-4Dy"/>
