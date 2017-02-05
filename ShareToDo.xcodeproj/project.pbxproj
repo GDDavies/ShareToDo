@@ -10,6 +10,8 @@
 		930FF8F71E4691C40008E816 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 930FF8F61E4691C40008E816 /* GoogleService-Info.plist */; };
 		930FF8F91E46925D0008E816 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930FF8F81E46925D0008E816 /* AuthenticationManager.swift */; };
 		930FF8FD1E4698420008E816 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930FF8FC1E4698420008E816 /* ToDoListTableViewController.swift */; };
+		930FF8FF1E46ADED0008E816 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930FF8FE1E46ADED0008E816 /* AddToDoViewController.swift */; };
+		930FF9011E46C2620008E816 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930FF9001E46C2620008E816 /* ToDo.swift */; };
 		939B9E621E46890500D40B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E611E46890500D40B1C /* AppDelegate.swift */; };
 		939B9E641E46890500D40B1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E631E46890500D40B1C /* LoginViewController.swift */; };
 		939B9E671E46890500D40B1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939B9E651E46890500D40B1C /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		930FF8F61E4691C40008E816 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		930FF8F81E46925D0008E816 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		930FF8FC1E4698420008E816 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
+		930FF8FE1E46ADED0008E816 /* AddToDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		930FF9001E46C2620008E816 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		939B9E5E1E46890500D40B1C /* ShareToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939B9E611E46890500D40B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		939B9E631E46890500D40B1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		930FF9021E46C26C0008E816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				930FF9001E46C2620008E816 /* ToDo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		939B9E551E46890500D40B1C = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +105,9 @@
 				939B9E631E46890500D40B1C /* LoginViewController.swift */,
 				939B9E751E4690CF00D40B1C /* SignUpViewController.swift */,
 				930FF8FC1E4698420008E816 /* ToDoListTableViewController.swift */,
+				930FF8FE1E46ADED0008E816 /* AddToDoViewController.swift */,
 				930FF8F81E46925D0008E816 /* AuthenticationManager.swift */,
+				930FF9021E46C26C0008E816 /* Model */,
 				939B9E651E46890500D40B1C /* Main.storyboard */,
 				939B9E681E46890600D40B1C /* Assets.xcassets */,
 				939B9E6A1E46890600D40B1C /* LaunchScreen.storyboard */,
@@ -231,7 +245,9 @@
 				939B9E741E4690BD00D40B1C /* MainViewController.swift in Sources */,
 				939B9E641E46890500D40B1C /* LoginViewController.swift in Sources */,
 				939B9E761E4690CF00D40B1C /* SignUpViewController.swift in Sources */,
+				930FF9011E46C2620008E816 /* ToDo.swift in Sources */,
 				930FF8F91E46925D0008E816 /* AuthenticationManager.swift in Sources */,
+				930FF8FF1E46ADED0008E816 /* AddToDoViewController.swift in Sources */,
 				939B9E621E46890500D40B1C /* AppDelegate.swift in Sources */,
 				930FF8FD1E4698420008E816 /* ToDoListTableViewController.swift in Sources */,
 			);

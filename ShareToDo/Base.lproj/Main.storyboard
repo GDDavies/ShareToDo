@@ -88,6 +88,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDo" id="KnF-Px-CXM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="xKI-RL-uTV">
+                            <connections>
+                                <segue destination="wc8-Sl-pB8" kind="presentation" id="Kfq-DY-tNv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="yrh-AJ-Y36">
                             <connections>
                                 <action selector="signOutWithSender:" destination="0lf-hm-kZ1" id="jaA-MF-oXA"/>
@@ -98,6 +103,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPR-Oo-rYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2561" y="901"/>
+        </scene>
+        <!--Add To Do View Controller-->
+        <scene sceneID="G1Y-BQ-ve0">
+            <objects>
+                <viewController id="GLG-TA-wdu" customClass="AddToDoViewController" customModule="ShareToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GLa-Ff-Qv4"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJ7-aR-dFo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVs-X4-3ow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqL-kg-ehO">
+                                <rect key="frame" x="37.5" y="110" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ToDo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-bH-GLd">
+                                <rect key="frame" x="37.5" y="167" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwN-F2-Bbd">
+                                <rect key="frame" x="37" y="239" width="300" height="62"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gwN-F2-Bbd" secondAttribute="height" multiplier="150:31" id="X4h-p8-99Q"/>
+                                </constraints>
+                                <state key="normal" title="Save ToDo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveToDo:" destination="GLG-TA-wdu" eventType="touchUpInside" id="AgD-dh-6yB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Clc-bH-GLd" firstAttribute="width" secondItem="kqL-kg-ehO" secondAttribute="width" id="Nxq-zd-7lj"/>
+                            <constraint firstItem="gwN-F2-Bbd" firstAttribute="width" secondItem="kqL-kg-ehO" secondAttribute="width" id="Xhg-Zt-iDI"/>
+                            <constraint firstItem="kqL-kg-ehO" firstAttribute="width" secondItem="KVs-X4-3ow" secondAttribute="width" multiplier="0.8" id="YN3-kS-Lyk"/>
+                            <constraint firstItem="kqL-kg-ehO" firstAttribute="centerX" secondItem="KVs-X4-3ow" secondAttribute="centerX" id="d2A-ei-Zll"/>
+                            <constraint firstItem="Clc-bH-GLd" firstAttribute="top" secondItem="kqL-kg-ehO" secondAttribute="bottom" constant="27" id="dOT-ac-tSJ"/>
+                            <constraint firstItem="gwN-F2-Bbd" firstAttribute="top" secondItem="Clc-bH-GLd" secondAttribute="bottom" constant="42" id="hPG-I7-W3C"/>
+                            <constraint firstItem="Clc-bH-GLd" firstAttribute="centerX" secondItem="KVs-X4-3ow" secondAttribute="centerX" id="nEJ-Jn-LbQ"/>
+                            <constraint firstItem="kqL-kg-ehO" firstAttribute="top" secondItem="GLa-Ff-Qv4" secondAttribute="bottom" constant="46" id="ra3-kv-hYI"/>
+                            <constraint firstItem="gwN-F2-Bbd" firstAttribute="centerX" secondItem="KVs-X4-3ow" secondAttribute="centerX" id="vn2-ie-nOn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AAD-8s-84B"/>
+                    <connections>
+                        <outlet property="toDoTextField" destination="Clc-bH-GLd" id="ewg-No-eEb"/>
+                        <outlet property="toTextField" destination="kqL-kg-ehO" id="caA-Co-4Dy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l37-FM-JYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4284" y="900.89955022488766"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gWc-ou-78b">
@@ -267,8 +333,26 @@
             </objects>
             <point key="canvasLocation" x="1741.5" y="901.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a8U-w4-38Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wc8-Sl-pB8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vp6-pQ-2Cy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GLG-TA-wdu" kind="relationship" relationship="rootViewController" id="XmL-td-3F9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FG-7F-unS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3344.8000000000002" y="900.89955022488766"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bXj-KY-HYx"/>
+        <segue reference="wSo-sM-VPb"/>
     </inferredMetricsTieBreakers>
 </document>
