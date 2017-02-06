@@ -17,17 +17,6 @@ class ToDoListTableViewController: UITableViewController {
     private var databaseHandle: FIRDatabaseHandle!
     var senderId: String?
     var recipientName: String?
-    
-    @IBAction func signOut(sender: UIBarButtonItem) {
-        let firebaseAuth = FIRAuth.auth()
-        do {
-            try firebaseAuth?.signOut()
-            AuthenticationManager.sharedInstance.loggedIn = false
-            dismiss(animated: true, completion: nil)
-        } catch let signOutError as NSError {
-            print ("Error signing out: \(signOutError)")
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
