@@ -69,33 +69,29 @@ class FriendsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "UserCell")
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell2")
         
-        let user = friends[indexPath.row]
-        cell.textLabel?.text = user.email
-        
-        let userIndex = selectedFriends.index(where: {$0 == friends[indexPath.row] as AnyHashable})
-        
-        if userIndex != nil {
-            cell.accessoryType = UITableViewCellAccessoryType.checkmark
-        }
+//        let user = friends[indexPath.row]
+//        cell.textLabel?.text = user.email
+//        
+//        let userIndex = selectedFriends.index(where: {$0 == friends[indexPath.row] as AnyHashable})
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        if (cell?.accessoryType == UITableViewCellAccessoryType.checkmark){
-            cell!.accessoryType = UITableViewCellAccessoryType.none;
-            if let indexOfComponent = selectedFriends.index(where: {$0 == friends[indexPath.row].uid!}){
-                selectedFriends.remove(at: indexOfComponent)
-            }
-        }else{
-            selectedFriends.append(friends[indexPath.row].uid!)
-            cell!.accessoryType = UITableViewCellAccessoryType.checkmark;
-        }
+//        let cell = tableView.cellForRow(at: indexPath)
+//        
+//        if (cell?.accessoryType == UITableViewCellAccessoryType.checkmark){
+//            cell!.accessoryType = UITableViewCellAccessoryType.none;
+//            if let indexOfComponent = selectedFriends.index(where: {$0 == friends[indexPath.row].uid!}){
+//                selectedFriends.remove(at: indexOfComponent)
+//            }
+//        }else{
+//            selectedFriends.append(friends[indexPath.row].uid!)
+//            cell!.accessoryType = UITableViewCellAccessoryType.checkmark;
+//        }
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
