@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Friend: NSObject {
+class User: NSObject {
     var uid: String?
     var email: String?
+    var friends = [String]()
 }

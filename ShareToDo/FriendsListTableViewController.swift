@@ -13,7 +13,7 @@ class FriendsListTableViewController: UITableViewController {
     
     var ref: FIRDatabaseReference!
     
-    var friends = [Friend]()
+    var friends = [User]()
     var selectedFriends = [String]()
     var userID: String?
     
@@ -43,7 +43,7 @@ class FriendsListTableViewController: UITableViewController {
         FIRDatabase.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                let friend = Friend()
+                let friend = User()
                 friend.setValuesForKeys(dictionary)
                 
                 let currentFriend = FIRAuth.auth()?.currentUser

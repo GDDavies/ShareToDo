@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    var userID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +53,25 @@ class SignUpViewController: UIViewController {
                 return
             }
             
+            guard let uid = user?.uid else {
+                return
+            }
+            
             if let user = user {
                 self.setUserName(user: user, name: name)
             }
+            
+            let ref = FIRDatabase.database().reference(fromURL: "https://sharetodo-2bbee.firebaseio.com/")
+            
+            let usersReference = ref.child("users").child(uid)
+            
+            usersReference.updateChildValues(["email": email, "uid": uid], withCompletionBlock: { (err, ref) in
+                if err != nil {
+                    print(err as Any)
+                    return
+                }
+                print("Saved user successfully")
+            })
         }
     }
 
@@ -67,8 +85,7 @@ class SignUpViewController: UIViewController {
                 return
             }
             
-            AuthenticationManager.sharedInstance.didLogIn(user: user)
-            self.performSegue(withIdentifier: "ShowToDoList", sender: nil)
+            self.signedIn(FIRAuth.auth()?.currentUser)
         }
     }
     
@@ -83,4 +100,22 @@ class SignUpViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    func signedIn(_ user: FIRUser?) {
+        
+        UserStatus.sharedInstance.displayName = user?.displayName ?? user?.email
+        UserStatus.sharedInstance.signedIn = true
+        UserStatus.sharedInstance.userId = user?.uid
+        userID = user?.uid
+        performSegue(withIdentifier: "SignInFromSignUp", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignInFromSignUp" {
+            if let navContoller = segue.destination as? UINavigationController {
+                if let destinationVC = navContoller.topViewController as? FriendsListTableViewController {
+                    destinationVC.userID = userID
+                }
+            }
+        }
+    }
 }

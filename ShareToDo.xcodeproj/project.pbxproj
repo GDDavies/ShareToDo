@@ -19,8 +19,9 @@
 		939B9E6C1E46890600D40B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939B9E6A1E46890600D40B1C /* LaunchScreen.storyboard */; };
 		939B9E741E4690BD00D40B1C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E731E4690BD00D40B1C /* MainViewController.swift */; };
 		939B9E761E4690CF00D40B1C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B9E751E4690CF00D40B1C /* SignUpViewController.swift */; };
+		93AAB93D1E54D0CF0028D142 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AAB93C1E54D0CF0028D142 /* UserStatus.swift */; };
 		93B00A951E48ECD700891538 /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B00A941E48ECD700891538 /* FriendsListTableViewController.swift */; };
-		93B00A971E48F01100891538 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B00A961E48F01100891538 /* Friend.swift */; };
+		93B00A971E48F01100891538 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B00A961E48F01100891538 /* User.swift */; };
 		D74E1D0F7412FC32B316D7F6 /* Pods_ShareToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22E52C22A367637E992740C /* Pods_ShareToDo.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +41,9 @@
 		939B9E6D1E46890600D40B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939B9E731E4690BD00D40B1C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		939B9E751E4690CF00D40B1C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		93AAB93C1E54D0CF0028D142 /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		93B00A941E48ECD700891538 /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
-		93B00A961E48F01100891538 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		93B00A961E48F01100891538 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B22E52C22A367637E992740C /* Pods_ShareToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC05E7191103C7E03FFD376E /* Pods-ShareToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareToDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareToDo/Pods-ShareToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +80,8 @@
 		930FF9021E46C26C0008E816 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93B00A961E48F01100891538 /* Friend.swift */,
+				93B00A961E48F01100891538 /* User.swift */,
+				93AAB93C1E54D0CF0028D142 /* UserStatus.swift */,
 				930FF9001E46C2620008E816 /* ToDo.swift */,
 			);
 			name = Model;
@@ -255,7 +258,8 @@
 				930FF9011E46C2620008E816 /* ToDo.swift in Sources */,
 				930FF8F91E46925D0008E816 /* AuthenticationManager.swift in Sources */,
 				930FF8FF1E46ADED0008E816 /* AddToDoViewController.swift in Sources */,
-				93B00A971E48F01100891538 /* Friend.swift in Sources */,
+				93B00A971E48F01100891538 /* User.swift in Sources */,
+				93AAB93D1E54D0CF0028D142 /* UserStatus.swift in Sources */,
 				939B9E621E46890500D40B1C /* AppDelegate.swift in Sources */,
 				930FF8FD1E4698420008E816 /* ToDoListTableViewController.swift in Sources */,
 			);
